@@ -11,6 +11,7 @@ namespace Data.Configuration
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).UseIdentityColumn();
             builder.Property(x => x.Path).IsRequired();
+            builder.Property(x => x.BlogId).IsRequired();
         }
     }
 }

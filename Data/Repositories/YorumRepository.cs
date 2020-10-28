@@ -16,7 +16,7 @@ namespace Data.Repositories
         async Task<IEnumerable<Yorum>> IYorumRepository.GetWithYorumsByIdAsync(int ustYorumId)
 #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
-            return _context.Yorums.Where(x => x.UstId == ustYorumId);
+            return _context.Yorums.Where(x => x.UstYorumId == ustYorumId);
         }
 
         //Task<Yorum> AddAsync(Yorum entity)

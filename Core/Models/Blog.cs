@@ -15,8 +15,8 @@ namespace Core.Models
         }
 
         public int Id { get; set; }
+        public string UserId { get; set; }
         public int CategoryId { get; set; }
-        public Guid UserId { get; set; }
         public DateTime DateTime { get; set; }
         public byte Points { get; set; }
         public string Baslik { get; set; }

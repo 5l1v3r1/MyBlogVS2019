@@ -5,7 +5,7 @@ using Data.Repositories;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Service.Services
+namespace Services.Services
 {
     public class BlogService : Service<Blog>, IBlogService
     {
