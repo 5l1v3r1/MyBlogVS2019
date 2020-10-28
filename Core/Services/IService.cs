@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Core.Services
 {
-    public interface IService<TEntity> where TEntity : class
+    public interface IService<TEntity> where TEntity : class,new()
     {
         Task<TEntity> GetByIdAsync(int id);
         Task<IEnumerable<TEntity>> GetAllAsync();

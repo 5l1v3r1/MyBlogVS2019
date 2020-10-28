@@ -16,7 +16,10 @@ namespace Data.Seed
         {
             builder.HasData(
                 new Category { Id = _ids[0], Name = "Elektronik", UstCategoryId = 0 },
-                new Category { Id = _ids[1], Name = "Kırtasiye", UstCategoryId = 0 }
+                new Category { Id = _ids[1], Name = "Kırtasiye", UstCategoryId = 0 },
+                new Category { Id = _ids[2], Name = "Bilgisayar", UstCategoryId = 1 },
+                new Category { Id = _ids[3], Name = "Notebook", UstCategoryId = 3 },
+                new Category { Id = _ids[4], Name = "Lpatop", UstCategoryId = 4 }
             );
         }
     }

@@ -6,9 +6,9 @@ using Core.Services;
 using Core.UnitOfWorks;
 using Data.Repositories;
 
-namespace Service.Services
+namespace Services.Services
 {
-    public class Service<TEntity> : IService<TEntity> where TEntity : class
+    public class Service<TEntity> : IService<TEntity> where TEntity : class, new()
     {
         public readonly IUnitOfWork _unitOfWork;
         private readonly Repository<TEntity> _repository;

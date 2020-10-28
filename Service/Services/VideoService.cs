@@ -3,7 +3,7 @@ using Core.Services;
 using Core.UnitOfWorks;
 using Data.Repositories;
 
-namespace Service.Services
+namespace Services.Services
 {
     public class VideoService : Service<Video>, IVideoService
     {

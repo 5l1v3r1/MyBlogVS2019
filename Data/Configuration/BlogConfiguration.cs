@@ -10,8 +10,10 @@ namespace Data.Configuration
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).UseIdentityColumn();
-            builder.Property(x => x.CategoryId).IsRequired();
             builder.Property(x => x.UserId).IsRequired();
+            builder.Property(x => x.CategoryId).IsRequired();
+            builder.Property(x => x.Baslik).IsRequired();
+            builder.Property(x => x.Text).IsRequired();
         }
     }
 }
