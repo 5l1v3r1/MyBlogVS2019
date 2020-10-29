@@ -22,9 +22,9 @@ namespace Services.Services
             return await _unitOfWork.Categories.GetWithBlogsByIdAsync(CategoryId);
         }
 
-        async Task<IEnumerable<Category>> ICategoryService.GetWithCategoriesByIdAsync(int UstCategoryId)
+        async Task<IEnumerable<Category>> ICategoryService.GetWithCategoriesByIdAsync(int ParentId)
         {
-            return await _unitOfWork.Categories.GetWithCategoriesByIdAsync(UstCategoryId);
+            return await _unitOfWork.Categories.GetWithCategoriesByIdAsync(ParentId);
         }
     }
 }

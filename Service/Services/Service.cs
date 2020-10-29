@@ -29,11 +29,9 @@ namespace Services.Services
             return await _repository.GetAllAsync();
         }
 
-#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
-        async Task<IEnumerable<TEntity>> IService<TEntity>.Where(Expression<Func<TEntity, bool>> predicate)
-#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
+        Task<IEnumerable<TEntity>> IService<TEntity>.Where(Expression<Func<TEntity, bool>> predicate)
         {
-            return _repository.Where(predicate).Result;
+            return Task.FromResult(_repository.Where(predicate).Result);
         }
 
         public async Task<TEntity> SingleOrDefaultAsync(Expression<Func<TEntity, bool>> predicate)

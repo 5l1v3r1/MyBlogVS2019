@@ -7,6 +7,6 @@ namespace Core.Repositories
     public interface ICategoryRepository : IRepository<Category>
     {
         Task<IEnumerable<Blog>> GetWithBlogsByIdAsync(int categoryId);
-        Task<IEnumerable<Category>> GetWithCategoriesByIdAsync(int ustCcategoryId);
+        Task<IEnumerable<Category>> GetWithCategoriesByIdAsync(int ParentId);
     }
 }

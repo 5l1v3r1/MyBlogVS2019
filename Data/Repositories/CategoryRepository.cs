@@ -18,15 +18,15 @@ namespace Data.Repositories
         }
         public async Task<IEnumerable<Blog>> GetWithBlogsByIdAsync(int categoryId)
         {
-            return (IEnumerable<Blog>)await AppDbContext.Categories
+            return (IEnumerable<Blog>) await AppDbContext.Categories
                 .Include(x => x.Blogs)
                 .SingleOrDefaultAsync(x => x.Id == categoryId);
         }
-        async Task<IEnumerable<Category>> ICategoryRepository.GetWithCategoriesByIdAsync(int ustCcategoryId)
+        async Task<IEnumerable<Category>> ICategoryRepository.GetWithCategoriesByIdAsync(int ParentId)
         {
             return await AppDbContext.Categories
-                .Include(x => x.UstCategoryId)
-                .Where(x => x.UstCategoryId == ustCcategoryId)
+                .Include(x => x.ParentId)
+                .Where(x => x.ParentId == ParentId)
                 .ToListAsync();
         }
     }
