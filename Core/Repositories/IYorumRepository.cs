@@ -6,6 +6,6 @@ namespace Core.Repositories
 {
     public interface IYorumRepository : IRepository<Yorum>
     {
-        Task<IEnumerable<Yorum>> GetWithYorumsByIdAsync(int ustYorumId);
+        Task<IEnumerable<Yorum>> GetWithYorumsByIdAsync(int ParentId);
     }
 }

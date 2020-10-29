@@ -7,6 +7,6 @@ namespace Core.Services
     public interface ICategoryService : IService<Category>
     {
         Task<IEnumerable<Blog>> GetWithBlogsByIdAsync(int CategoryId);
-        Task<IEnumerable<Category>> GetWithCategoriesByIdAsync(int UstCategoryId);
+        Task<IEnumerable<Category>> GetWithCategoriesByIdAsync(int ParentId);
     }
 }

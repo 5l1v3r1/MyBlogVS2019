@@ -8,12 +8,14 @@ namespace Core.Models
         public Category()
         {
             Blogs = new Collection<Blog>();
-            Categories = new Collection<Category>();
+            SubCategories = new Collection<Category>();
         }
         public int Id { get; set; }
-        public int UstCategoryId { get; set; }
+        public int ParentId { get; set; }
         public string Name { get; set; }
+        public string Description { get; set; }
         public ICollection<Blog> Blogs { get; set; }
-        public ICollection<Category> Categories { get; set; }
+        public ICollection<Category> SubCategories { get; set; }
+
     }
 }
